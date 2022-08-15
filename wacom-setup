@@ -1,0 +1,11 @@
+#!/bin/bash
+
+sleep 2
+
+export XAUTHORITY=/run/user/1000/gdm/Xauthority 
+export DISPLAY=:1
+
+su mauzy -c 'notify-send "poop"'
+xsetwacom --set "Wacom Intuos BT S Pad pad" MapToOutput HEAD-1
+xsetwacom --set "Wacom Intuos BT S Pad pad" Button 8 10
+xsetwacom --set "Wacom Intuos BT S Pen stylus" MapToOutput HEAD-1

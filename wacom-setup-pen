@@ -1,0 +1,11 @@
+#!/bin/bash
+
+sleep 1
+
+export XAUTHORITY=/run/user/1000/gdm/Xauthority
+export DISPLAY=:1
+
+su mauzy -c 'notify-send "pen"'
+xsetwacom --set "Wacom Intuos BT S Pen stylus" MapToOutput HEAD-0
+
+

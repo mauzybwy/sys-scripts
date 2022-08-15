@@ -1,0 +1,11 @@
+#!/bin/bash
+
+sleep 1
+
+export XAUTHORITY=/run/user/1000/gdm/Xauthority
+export DISPLAY=:0
+
+su mauzy -c 'notify-send "pad"'
+xsetwacom --set "Wacom Intuos BT S Pad pad" MapToOutput HEAD-0
+xsetwacom --set "Wacom Intuos BT S Pad pad" Button 8 10
+
